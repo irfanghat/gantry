@@ -35,20 +35,20 @@ class CompiledPolicy:
 
     @property
     def has_redaction(self) -> bool:
-        # ---------------------------------------------------------------
+        # ----------------------------------------------------
         # Evaluated once per call, boolean OR on frozensets is O(1)
-        # ---------------------------------------------------------------
+        # ----------------------------------------------------
         return bool(self.full_fields or self.partial_fields or self.hashed_fields)
 
 
-# ---------------------------------------------------------------------------
+# ------------------------------------------------------------
 # NOTE
 #
 # load_policy()
 #
 # Validates, normalizes, resolves exception types, builds frozensets.
 # Never called in the hot path.
-# ---------------------------------------------------------------------------
+# ------------------------------------------------------------
 
 
 def _resolve_exc(name: str) -> type[BaseException]:

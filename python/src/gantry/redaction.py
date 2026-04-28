@@ -11,7 +11,7 @@ from gantry.schema import RetryConfig, RedactConfig, PolicySpec
 
 log = logging.getLogger(__name__)
 
-# ---------------------------------------------------------------------------
+# ------------------------------------------------------------
 # NOTE
 #
 # [Redaction Engine]
@@ -19,7 +19,7 @@ log = logging.getLogger(__name__)
 # Current strategy: shallow-copy the top-level dict once, and mutate in place.
 # No regex in hot path - O(1) frozenset lookups only.
 # Recurses into nested dicts/lists without extra copies.
-# ---------------------------------------------------------------------------
+# ------------------------------------------------------------
 
 def _mask_full(_: Any)    -> str: return "***"
 def _mask_partial(v: Any) -> str: s = str(v); return (s[:2] + "***") if len(s) > 2 else "***"

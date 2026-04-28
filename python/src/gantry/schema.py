@@ -10,14 +10,14 @@ from typing import Any, Callable
 
 log = logging.getLogger(__name__)
 
-# ---------------------------------------------------------------------------
+# ------------------------------------------------------------
 # NOTE
 #
 # [Schema Definition]
 #
 # [Structured], [typed] policy definition.
 # Frozen dataclasses: [hashable], safe to share across threads.
-# ---------------------------------------------------------------------------
+# ------------------------------------------------------------
 
 @dataclass(frozen=True, slots=True)
 class RetryConfig:

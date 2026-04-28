@@ -13,13 +13,13 @@ from gantry.redaction import *
 from gantry.schema import RetryConfig, RedactConfig, PolicySpec
 
 
-# ---------------------------------------------------------------------------
+# ------------------------------------------------------------
 # NOTE
 #
 # [Execution Engine]
 #
 # Contains sync & async, as well as unified retry logic.
-# ---------------------------------------------------------------------------
+# ------------------------------------------------------------
 
 
 class PolicyError(Exception):
@@ -113,7 +113,7 @@ async def _execute_async(
     raise PolicyError(f"[{policy.name}] retry exhausted", last_exc)
 
 
-# ---------------------------------------------------------------------------
+# --------------------------------------------------------------
 # NOTE
 #
 # [Public Decorator]
@@ -122,7 +122,7 @@ async def _execute_async(
 #
 # Detects sync vs async at decoration time, not per call.
 # Redaction applied to kwargs before logging, never modifies the real call.
-# ---------------------------------------------------------------------------
+# --------------------------------------------------------------
 
 
 def apply_policy(policy: CompiledPolicy) -> Callable:
