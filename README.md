@@ -1,6 +1,6 @@
 # Gantry
 
-[Logo]!(https://github.com/irfanghat/gantry/blob/main/docs/images/logo-transparent.png)
+![Logo](https://github.com/irfanghat/gantry/blob/main/docs/images/logo-transparent.png)
 
 **Policy-driven execution for Python, C++, and Rust.**
 Add retries, redaction, and flow control to any function using a single decorator/attribute.
