@@ -1,6 +1,6 @@
 # Gantry
 
-[Logo](https://github.com/irfanghat/gantry/blob/main/docs/images/logo-transparent.png)
+[Logo]!(https://github.com/irfanghat/gantry/blob/main/docs/images/logo-transparent.png)
 
 **Policy-driven execution for Python, C++, and Rust.**
 Add retries, redaction, and flow control to any function using a single decorator/attribute.
@@ -11,7 +11,6 @@ Built for:
 * **Clear, declarative policies**
 * **Cross-language consistency**
 
----
 
 ## Why Gantry?
 
@@ -38,7 +37,6 @@ def call_api(...):
 
 That’s it, retry, redaction & observability handled.
 
----
 
 ## Core Idea
 
@@ -48,7 +46,6 @@ Gantry separates **configuration** from **execution**:
 2. **Compile once** (optimized, immutable)
 3. **Execute many times** (zero parsing, minimal overhead)
 
----
 
 ## How It Works
 
@@ -63,7 +60,6 @@ policy = load_policy(spec)
 * Converts lists -> `frozenset` (fast lookups)
 * Produces a **CompiledPolicy** (immutable, thread-safe)
 
----
 
 ### 2. Apply (Decorate your function)
 
@@ -73,7 +69,6 @@ def fn(...):
     ...
 ```
 
----
 
 ### 3. Execute (Every call)
 
@@ -88,7 +83,6 @@ At runtime Gantry:
 4. Emits observer events
 5. Returns result or raises `PolicyError`
 
----
 
 ## Example
 
@@ -109,7 +103,6 @@ def login(username, password):
     ...
 ```
 
----
 
 ## Key Features
 
@@ -134,7 +127,6 @@ Only affects **logs**, never your actual data.
 * No deep copies
 * Fast O(1) lookups via `frozenset`
 
----
 
 ## Performance
 
@@ -149,7 +141,6 @@ Key optimizations:
 * Immutable structures (`frozenset`, `__slots__`)
 * Separate sync/async paths (no branching)
 
----
 
 ## Extensibility
 
@@ -169,7 +160,6 @@ Events:
 * `retry.result`
 * `success`
 
----
 
 ### Custom Retry Logic
 
@@ -185,7 +175,6 @@ policy = load_policy({
 })
 ```
 
----
 
 ## Design Principles
 
@@ -195,7 +184,6 @@ policy = load_policy({
 * **Pay for what you use** -> no redaction = zero cost
 * **Cross-language parity** -> same model in Python, C++, Rust
 
----
 
 ## When to Use
 
@@ -206,7 +194,6 @@ Use Gantry when you need:
 * Safe logging (PII masking)
 * Consistent behavior across services/languages
 
----
 
 ## When Not to Use
 
@@ -214,7 +201,6 @@ Use Gantry when you need:
 * Stateful retries or distributed coordination (Might be worth looking into)
 * Cases needing dynamic per-call policy changes
 
----
 
 ## Summary
 
