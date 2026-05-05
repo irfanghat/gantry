@@ -1,0 +1,10 @@
+[package]
+name = "gantry"
+version = "0.0.1"
+edition = "2024"
+description = "Add retries, redaction, and flow control to any function using a single decorator/attribute."
+
+authors = ["Irfan M. Ghat <irfanghat@gmail.com>"]
+
+[dependencies]
+serde = { version = "1.0.228", features = ["derive"] }
